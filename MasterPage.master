@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Nelly Pacis-Brandt / Home</title>
+    <link href="bluebusiness.css" rel="stylesheet" type="text/css" />
+    <meta name="google-site-verification" content="LXqtpVPBKljek-hmhhZC-TSF6-LQoauPw20ACs-MN6Y" />
+    <meta name="description" content="Celebrate the life of Nelly Brandt, our friend and our sister." />
+    <meta name="keywords" content="Pancit, Lumpia, Sinigang, Cooking, Filipino Cooking, Philippino Food, Filipino food, Philippines, Philippine Calling Cards, Calling Cards" />
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body style="">
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="container-header">
+                <div id="container-name">Nelly <span>Pacis Brandt</span></div>
+		        <div id="container-slogan">
+		            <span></span><asp:Literal runat="server" ID="litDate" text="<%$ Resources:litDate %>"></asp:Literal><span></span>
+		        </div>
+            </div>
+            
+	        <div id="container-eyecatcher">
+                <div id="container-navigation">
+                    <ul id="navigation">
+                        <li><a href="Default.aspx"><asp:Literal runat="server" ID="litMenuHome" Text="<%$ Resources:litMenuHome %>"></asp:Literal></a></li>
+                        <li><a href="Memorial.aspx"><asp:Literal runat="server" ID="litMenuMemorial" Text="<%$ Resources:litMenuMemorial %>"></asp:Literal></a></li>
+                        <li><a href="GuestBook.aspx"><asp:Literal runat="server" ID="litMenuGuestbook" Text="<%$ Resources:litMenuGuestbook %>"></asp:Literal></a></li>                        
+                        <li><a href="PhotoView.aspx"><asp:Literal runat="server" ID="litMenuPhotos" Text="<%$ Resources:litMenuPhotos %>"></asp:Literal></a></li>
+                        <li><a href="PhotoUpload.aspx"><asp:Literal runat="server" ID="litMenuSubmitPhoto" Text="<%$ Resources:litMenuSubmitPhoto %>"></asp:Literal></a></li>                        
+                        <li><a href="About.aspx"><asp:Literal runat="server" ID="litMenuAbout" Text="<%$ Resources:litMenuAbout %>"></asp:Literal></a></li>
+                        <asp:LoginView runat="server" ID="lgv1">
+                            <LoggedInTemplate>
+                                <li><a href="Admin.aspx">admin</a></li>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </ul>
+                </div>
+                <img src="images/business_eyecatcher.jpg" alt="Business picture" />
+	        </div>
+
+            <div id="container-content">
+                <div id="content">
+                  <div style="margin: 0 auto; width: 470px;">
+                        <script type="text/javascript"><!--
+                            google_ad_client = "pub-3431937795864410";
+                            /* 468x60, created 3/23/10 */
+                            google_ad_slot = "7042572559";
+                            google_ad_width = 468;
+                            google_ad_height = 60;
+                            //-->
+                        </script>
+                        <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                        </script>
+                    </div>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <br /><br />
+            <table style="width: 650px; padding-top: 42px;" visible="false">
+                <tr>
+                    <td align="center">
+                    </td>
+                </tr>
+            </table>
+            <div style="clear: both"></div>
+            <div id="container-footer"> 
+                <div id="footer"> 
+                    <div id="footer-copyright">
+                        Copyright&copy; 2009 VSR Consulting - all rights reserved 
+                        <br />
+                        Last Update: 11/04/2009 9:11am
+                    </div>
+                    <div id="footer-meta">
+                        <a href="http://www.christian-pansch.de" title="Webdesign Bremen">Design by christian-pansch.de</a>
+                        <br />
+                        <asp:LoginStatus runat="server" id="ctlLogin" LoginText="Administrator" LogoutText="Logout" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx?o=1" />
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-10860292-1");
+                pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
+    </form>
+</body>
+</html>
